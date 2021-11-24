@@ -4,4 +4,13 @@
   z-index: 1;
   background: rgba(34, 34, 34, 0.6);
   backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (max-width: 550px) {
+  .rightContainer {
+    min-width: 64px;
+    width: 64px;
+  }
 }

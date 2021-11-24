@@ -43,6 +43,8 @@ function Banner() {
           </div>
         </div>
       </div>
+
+      <div className="bottom"></div>
     </div>
   );
 }

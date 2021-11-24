@@ -1,0 +1,113 @@
+.musicPlayer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.musicPlayer .songImage {
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.musicPlayer .songImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.musicPlayer .songAttributes {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.musicPlayer .songAttributes .top,
+.musicPlayer .songAttributes .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.musicPlayer .songAttributes .top .left,
+.musicPlayer .songAttributes .top .middle,
+.musicPlayer .songAttributes .top .right {
+  color: #595959;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.musicPlayer .songAttributes .top .left,
+.musicPlayer .songAttributes .top .middle {
+  display: flex;
+  align-items: center;
+}
+
+.musicPlayer .songAttributes .top .left .loved {
+  color: #49e12e !important;
+  filter: drop-shadow(0px 0px 4px #49e12e);
+}
+
+.musicPlayer .songAttributes .top .left .download {
+  padding-left: 20px;
+}
+
+.musicPlayer .songAttributes .top .middle .back i,
+.musicPlayer .songAttributes .top .middle .forward i {
+  margin: 0px 25px;
+}
+
+.musicPlayer .songAttributes .top .middle .back i:nth-child(1),
+.musicPlayer .songAttributes .top .middle .forward i:nth-child(1) {
+  margin-right: 0;
+}
+
+.musicPlayer .songAttributes .top .middle .back i:nth-child(2),
+.musicPlayer .songAttributes .top .middle .forward i:nth-child(2) {
+  color: #9a9a9a !important;
+}
+
+.musicPlayer .songAttributes .top .middle .playPause {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicPlayer .songAttributes .top .middle .playPause i {
+  color: #000;
+}
+
+.musicPlayer .songAttributes .bottom {
+  margin-top: 20px;
+}
+
+.musicPlayer .songAttributes .bottom .progressBar {
+  width: 100%;
+}
+
+.musicPlayer .songAttributes .bottom .currentTime,
+.musicPlayer .songAttributes .bottom .duration {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.musicPlayer .songAttributes .bottom .currentTime {
+  margin-right: 20px;
+}
+
+.musicPlayer .songAttributes .bottom .duration {
+  margin-left: 20px;
+}

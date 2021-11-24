@@ -4,6 +4,7 @@
   z-index: 1;
   background: rgba(34, 34, 34, 0.6);
   backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .Banner {
@@ -21,6 +22,15 @@
   filter: grayscale(100);
 }
 
+.Banner .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
 .content {
   position: absolute;
   top: 0;
@@ -30,6 +40,7 @@
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .content .breadCrump {
@@ -103,6 +114,7 @@
   border-radius: 100vw;
   margin: 0 20px;
   font-weight: bold;
+  display: flex;
 }
 
 .content .artist .right a i {
@@ -182,4 +194,177 @@
 
 .AudioList {
   padding: 10px 30px;
+}
+
+.AudioList .title {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+.AudioList .title span {
+  margin-left: 5px;
+  color: #848484;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.AudioList .songsContainer {
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.AudioList .songs {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #848484;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  padding-bottom: 5px;
+}
+
+.AudioList .songs .count {
+  margin-right: 10px;
+}
+
+.AudioList .songs .song {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 5px;
+}
+
+.AudioList .songs .song .imgBox {
+  width: 45px;
+  min-width: 45px;
+  height: 45px;
+  border-radius: 0.5em;
+  background-color: #848484;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.AudioList .songs .song .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.AudioList .songs .song .section {
+  display: flex;
+  width: 100%;
+}
+
+.AudioList .songs .song .section .songName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.AudioList .songs .song .section .songName span {
+  margin-left: 0;
+  font-size: 12px;
+}
+
+.AudioList .songs .song .section .hits {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.AudioList .songs .song .section .hits p {
+  margin: 0 20px;
+}
+
+.AudioList .songs .song .section .hits p:nth-child(1) {
+  margin-left: 0;
+}
+
+.AudioList .songs .song .section .hits .favourite i {
+  color: #49e12e !important;
+  filter: drop-shadow(0px 0px 4px #49e12e);
+}
+
+.AudioList .songs:hover {
+  color: #f1f1f1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.AudioList .songs:hover .song .imgBox img {
+  transform: scale(1.2);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    padding: 10px 15px;
+  }
+
+  .content .breadCrump P {
+    font-size: 12px;
+  }
+
+  .content .breadCrump i {
+    font-size: 14px;
+  }
+
+  .content .artist .left .name h2 {
+    font-size: 25px;
+  }
+
+  .content .artist .right a {
+    padding: 5px 15px;
+    font-size: 12px;
+    margin: 0 10px;
+  }
+
+  .menuList ul li {
+    margin: 0 5px;
+  }
+
+  .mainContainer .menuList ul li a {
+    font-size: 14px;
+  }
+
+  .mainContainer .menuList p {
+    font-size: 12px;
+  }
+
+  .mainContainer .menuList p i {
+    font-size: 10px;
+  }
+
+  .mainContainer .menuList p span {
+    margin-left: 0px;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+  }
+
+  .mainContainer .menuList {
+    padding: 10px 15px;
+  }
+
+  .AudioList {
+    padding: 10px 5px;
+  }
+
+  .AudioList .songs .song .section {
+    flex-direction: column;
+  }
+
+  .AudioList .songs .song .section .songName {
+    width: 100%;
+  }
+
+  .AudioList .songs .song .section .hits {
+    margin-left: 0;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
 }

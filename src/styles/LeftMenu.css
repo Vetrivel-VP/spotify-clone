@@ -130,6 +130,7 @@
 
 .playListContainer {
   margin: 15px 0px;
+  cursor: pointer;
 }
 
 .playListContainer .nameContainer {
@@ -162,6 +163,11 @@
   align-items: center;
   color: #848484;
   margin: 10px 0;
+}
+
+.playListContainer .playListScroll .playLists:hover {
+  color: #f1f1f1;
+  transition: all 0.3s;
 }
 
 .playListContainer .playListScroll .playLists .list {
@@ -267,6 +273,7 @@
 
 @media screen and (max-width: 550px) {
   .leftMenu {
+    min-width: 64px;
     width: 64px;
   }
 
