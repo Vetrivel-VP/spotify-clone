@@ -1,0 +1,7 @@
+.rightContainer {
+  height: 100vh;
+  width: 100px;
+  z-index: 1;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+}

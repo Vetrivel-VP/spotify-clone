@@ -1,0 +1,181 @@
+.mainContainer {
+  height: 100vh;
+  flex-grow: 1;
+  z-index: 1;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.Banner {
+  height: 300px;
+  position: relative;
+}
+
+.Banner .bannerImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .breadCrump {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .breadCrump P {
+  color: #848484;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.content .breadCrump P span {
+  color: #f1f1f1;
+}
+
+.content .breadCrump i {
+  color: #f1f1f1;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.content .artist {
+  margin-top: auto;
+  color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .artist .left .name {
+  display: flex;
+  align-items: center;
+}
+
+.content .artist .left .name h2 {
+  font-size: 50px;
+}
+
+.content .artist .left .name img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.content .artist .left p {
+  font-size: 14px;
+}
+
+.content .artist .left p i {
+  margin-right: 6px;
+}
+
+.content .artist .left p span {
+  color: #848484;
+  margin-left: 6px;
+}
+
+.content .artist .right {
+  display: flex;
+  align-items: center;
+}
+
+.content .artist .right a {
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #f1f1f1;
+  border-radius: 100vw;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.content .artist .right a i {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.content .artist .right a:nth-child(1) {
+  background: #39aa24;
+}
+
+.content .artist .right a:nth-child(2) {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: 0;
+}
+
+.mainContainer .menuList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #2c2c2c;
+}
+
+.menuList ul {
+  display: flex;
+  align-items: center;
+}
+
+.menuList ul li {
+  list-style: none;
+  margin: 0 25px;
+  position: relative;
+}
+
+.mainContainer .menuList ul li a {
+  text-decoration: none;
+  color: #848484;
+}
+
+.mainContainer .menuList ul li::before {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 10px;
+  width: 0px;
+  height: 5px;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.mainContainer .menuList ul li:hover::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mainContainer .menuList ul li:hover a {
+  color: #f1f1f1;
+  transition: 0.3s ease;
+}
+
+.mainContainer .menuList p {
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.mainContainer p i {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.mainContainer p span {
+  margin-left: 6px;
+  color: #848484;
+}

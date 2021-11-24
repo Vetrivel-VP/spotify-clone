@@ -1,0 +1,296 @@
+.leftMenu {
+  width: 280px;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 25px 20px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f1f1f1;
+}
+
+.logoContainer .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer .logo i {
+  font-size: 30px;
+}
+
+.logoContainer .logo h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.searchBox {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  margin-top: 20px;
+  color: #848484;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.searchBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  padding-left: 45px;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.searchBox input::placeholder {
+  color: #848484;
+}
+
+.searchBox i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.menuContainer {
+  margin: 15px 0;
+}
+
+.menuContainer p {
+  color: #848484;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.menuContainer ul {
+  width: 100%;
+  padding: 0px;
+}
+
+.menuContainer ul li {
+  list-style: none;
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px 0px;
+  position: relative;
+}
+
+.menuContainer ul li a {
+  text-decoration: none;
+  color: #848484;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.menuContainer ul li a i {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.menuContainer ul li::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -15px;
+  width: 0px;
+  height: 100%;
+  background: #49e12e;
+  border-radius: 5px;
+}
+
+.menuContainer ul li:hover a {
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.menuContainer ul li:hover::before {
+  width: 5px;
+  transition: width 0.5s;
+}
+
+.playListContainer {
+  margin: 15px 0px;
+}
+
+.playListContainer .nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #848484;
+  margin-bottom: 10px;
+}
+
+.playListContainer .nameContainer p {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.playListContainer .nameContainer i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.playListContainer .playListScroll {
+  height: 140px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.playListContainer .playListScroll .playLists {
+  display: flex;
+  align-items: center;
+  color: #848484;
+  margin: 10px 0;
+}
+
+.playListContainer .playListScroll .playLists .list {
+  font-size: 18px;
+}
+
+.playListContainer .playListScroll .playLists p {
+  font-size: 16px;
+  margin-left: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline;
+}
+
+.playListContainer .playListScroll .playLists .trash {
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.trackList {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.trackList .top {
+  display: flex;
+  align-items: center;
+}
+
+.trackList .top img {
+  width: 50px !important;
+}
+
+.trackList .top p {
+  margin-left: 15px;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.trackList .top p span {
+  display: block;
+  font-size: 12px;
+  color: #848484;
+}
+
+.trackList .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #848484;
+}
+
+.trackList .bottom i {
+  font-size: 18px;
+}
+
+.trackList .bottom i:hover {
+  color: #f1f1f1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.trackList .bottom input {
+  position: relative;
+  height: 5px;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* chrome and safari browser */
+.trackList .bottom input::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #49e12e;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+.trackList .bottom input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+  transition: all 250ms linear;
+  background: #f1f1f1;
+}
+
+@media screen and (max-width: 550px) {
+  .leftMenu {
+    width: 64px;
+  }
+
+  .leftMenu .searchBox {
+    display: none;
+  }
+
+  .leftMenu .trackList {
+    display: none;
+  }
+
+  .leftMenu .playListContainer {
+    display: none;
+  }
+
+  .leftMenu .menuContainer ul li a span {
+    display: none;
+  }
+
+  .leftMenu .menuContainer ul li a i {
+    font-size: 24px;
+  }
+
+  .leftMenu .menuContainer ul li {
+    margin: 25px 0;
+  }
+}
