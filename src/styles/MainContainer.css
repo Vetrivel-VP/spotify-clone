@@ -115,6 +115,7 @@
   margin: 0 20px;
   font-weight: bold;
   display: flex;
+  align-items: center;
 }
 
 .content .artist .right a i {
@@ -225,6 +226,11 @@
   padding-bottom: 5px;
 }
 
+.AudioList .songs.active,
+.AudioList .songs.active .song .section .songName .songSpan {
+  color: #f1f1f1 !important;
+}
+
 .AudioList .songs .count {
   margin-right: 10px;
 }
@@ -265,7 +271,7 @@
   width: 50%;
 }
 
-.AudioList .songs .song .section .songName span {
+.AudioList .songs .song .section .songName .songSpan {
   margin-left: 0;
   font-size: 12px;
 }
@@ -289,7 +295,8 @@
   filter: drop-shadow(0px 0px 4px #49e12e);
 }
 
-.AudioList .songs:hover {
+.AudioList .songs:hover,
+.AudioList .songs:hover .song .section .songName .songSpan {
   color: #f1f1f1;
   transition: all 0.3s;
   cursor: pointer;
@@ -301,6 +308,10 @@
 }
 
 @media screen and (max-width: 550px) {
+  .mainContainer {
+    min-width: 380px;
+  }
+
   .content {
     padding: 10px 15px;
   }
@@ -366,5 +377,12 @@
     margin-left: 0;
     margin-top: 5px;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Banner {
+    height: 240px !important;
+    position: relative;
   }
 }
