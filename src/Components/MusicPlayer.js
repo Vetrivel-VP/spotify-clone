@@ -160,7 +160,9 @@ function MusicPlayer({ song, imgSrc, auto }) {
             autoPlay={auto}
           />
           <div className="duration">
-            {duration && !isNaN(duration) && calculateTime(duration)}
+            {duration && !isNaN(duration) && calculateTime(duration)
+              ? duration && !isNaN(duration) && calculateTime(duration)
+              : "00:00"}
           </div>
         </div>
       </div>

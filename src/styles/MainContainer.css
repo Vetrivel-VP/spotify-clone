@@ -168,12 +168,14 @@
   background: #f1f1f1;
 }
 
-.mainContainer .menuList ul li:hover::before {
+.mainContainer .menuList ul li:hover::before,
+.mainContainer .menuList ul li.active::before {
   width: 20px;
   transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.mainContainer .menuList ul li:hover a {
+.mainContainer .menuList ul li:hover a,
+.mainContainer .menuList ul li.active a {
   color: #f1f1f1;
   transition: 0.3s ease;
 }

@@ -118,12 +118,14 @@
   border-radius: 5px;
 }
 
-.menuContainer ul li:hover a {
+.menuContainer ul li:hover a,
+.menuContainer ul li.active a {
   color: #f1f1f1;
   transition: 0.3s;
 }
 
-.menuContainer ul li:hover::before {
+.menuContainer ul li:hover::before,
+.menuContainer ul li.active::before {
   width: 5px;
   transition: width 0.5s;
 }
